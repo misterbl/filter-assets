@@ -20,7 +20,7 @@ class App extends React.Component {
     this.props.appActions.removeAssetFromPreview(asset)
   }
   filterAssetsLength = (assets, category) => {
-    const listLength = assets.filter(asset => asset.asset.type === category).length
+    const listLength = assets.filter(asset => asset.type === category).length
     if (listLength > 0) {
       return listLength
     }
@@ -41,8 +41,8 @@ class App extends React.Component {
 
   renderNumberOfEachAsset = (assets) => (
     <div className="col-6 asset-summary-right" >
-      {this.selectedAssetsTitles(assets).map(title => (
-        <span key={title} className="info" >{title}</span >
+      {this.selectedAssetsTitles(assets).map((title, index) => (
+        <span key={`${index}_${title}`} className="info" >{title}</span >
       ))}
     </div >
   )
@@ -74,7 +74,7 @@ class App extends React.Component {
               </ul>
             </div>
             <div className="col-8">
-              <h2>Learning Assets Preview</h2>
+              <h2 className="preview-title">Learning Assets Preview</h2>
               <AssetPreview addAssetToPreview={this.addAssetToPreview} assetPreview={this.props.assetPreview} removeAsset={this.removeAssetFromPreview} />
             </div>
           </div>

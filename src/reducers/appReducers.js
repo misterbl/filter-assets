@@ -11,7 +11,7 @@ export const previewedAssets = (
     case 'REMOVE_ASSET_FROM_PREVIEW':
       return {
         ...state,
-        previewedAssets: state.previewedAssets.filter(previewedAsset => asset.id !== previewedAsset.asset.id),
+        previewedAssets: state.previewedAssets.filter(previewedAsset => asset.id !== previewedAsset.id),
       };
     default:
       return state;

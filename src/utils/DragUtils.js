@@ -1,6 +1,6 @@
 export const source = {
     beginDrag(props) {
-        return props;
+        return props.asset;
     },
 
     endDrag(props, monitor, component) {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { DropTarget } from 'react-dnd';
-import assets from '../assets'
 import AssetCard from './AssetCard';
 import TYPES from '../const/types'
 import { target, collect } from '../utils/DropUtils'
@@ -20,7 +19,7 @@ class AssetPreview extends React.Component {
         const { connectDropTarget, assetPreview, removeAsset } = this.props;
         return connectDropTarget(
             <ul className='Cell preview-container '>
-                {assetPreview.map(asset => (<AssetCard key={asset.id} {...asset} button removeAsset={removeAsset} />))
+                {assetPreview.map(asset => (<AssetCard key={asset.id} asset={asset} button removeAsset={removeAsset} />))
                 }
             </ul>
         );
