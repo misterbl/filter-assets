@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import reducers from './reducers';
 
-const configureStore = ({ initialState = {} }, history) => {
+const configureStore = ({ initialState = {} }) => {
     const reducer = combineReducers({
         ...reducers,
     });
