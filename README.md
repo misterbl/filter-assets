@@ -1,14 +1,32 @@
-# Filtered Technical Challenge
+# Asset filter
 
-Thank you for taking the time to attempt this challenge.
+This app allows users to listen to add assets from a list to a Preview list using a drag and drop functionality
 
-These tests are used to evaluate candidates of all skill levels, so please complete them as you would in a working
-environment to a level you feel is an accurate representation of your skill set.
+## Getting Started
 
-If you are applying for a frontend role, please complete `README-FRONTEND.md`.
+Install the project dependencies.
 
-Each part should take 2-3 hours depending on experience.
+```bash
+yarn install
+```
 
-If you have any questions or would like to clarify any details, please email at@filtered.com.
+### Development
 
-Good luck!
+No need to build, just start the server.
+
+```bash
+yarn start
+```
+
+### Running unit tests locally
+
+```bash
+yarn test
+```
+
+
+Start the application.
+
+```bash
+yarn start
+```

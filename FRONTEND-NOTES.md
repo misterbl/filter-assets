@@ -1,5 +1,5 @@
-Name: 
-Email: 
-Time to complete: 
+Name: Laurent Bouhnik
+Email: misterbl@hotmail.com
+Time to complete: 4 hours
 
-Notes:
+Notes: 
