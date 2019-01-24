@@ -9,6 +9,7 @@ import './App.css';
 import AssetCard from './components/AssetCard';
 import { getAssetPreview } from './selectors/appSelectors';
 import AssetPreview from './components/AssetPreview';
+import CONST from './const/types'
 
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
   removeAssetFromPreview = (asset) => {
     this.props.appActions.removeAssetFromPreview(asset)
   }
+
   filterAssetsLength = (assets, category) => {
     const listLength = assets.filter(asset => asset.type === category).length
     if (listLength > 0) {
@@ -27,16 +29,12 @@ class App extends React.Component {
   }
 
   selectedAssetsTitles = (assets) => {
-    const videos = this.filterAssetsLength(assets, "Video");
-    const articles = this.filterAssetsLength(assets, "Article");
-    const documents = this.filterAssetsLength(assets, "Document");
-    const courses = this.filterAssetsLength(assets, "Online Course")
-    return (
-      [videos && (`${videos} x ${videos === 1 ? 'Video' : 'Videos'}`),
-      articles && (`${articles} x ${articles === 1 ? 'Article' : 'Articles'}`),
-      documents && (`${documents} x ${documents === 1 ? 'Document' : 'Documents'}`),
-      courses && (`${courses} x ${courses === 1 ? 'Online Course' : 'Online Courses'}`)]
-    )
+    const array = [];
+    CONST.ASSET_TYPES.map(type => {
+      const element = this.filterAssetsLength(assets, type)
+      array.push(element && (`${element} x ${element === 1 ? type : `${type}s`}`))
+    })
+    return array
   }
 
   renderNumberOfEachAsset = (assets) => (
