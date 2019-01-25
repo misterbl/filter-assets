@@ -1,6 +1,6 @@
 # Asset filter
 
-This app allows users to listen to add assets from a list to a Preview list using a drag and drop functionality
+This app allows users to listen to add assets from a list to a Preview list using a drag and drop or doule click functionality
 
 ## Getting Started
 

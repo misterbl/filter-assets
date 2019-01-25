@@ -67,7 +67,7 @@ class App extends React.Component {
             <div className="col-4">
               <ul className="asset-picker">
                 {availableAssets.map(asset => (
-                  <AssetCard key={asset.id} asset={asset} />
+                  <AssetCard key={asset.id} asset={asset} addAssetToPreview={this.addAssetToPreview} />
                 ))}
               </ul>
             </div>

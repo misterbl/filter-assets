@@ -4,9 +4,9 @@ import TYPES from '../const/types'
 import { source, collect } from '../utils/DragUtils'
 
 
-const AssetCard = ({ asset, button, connectDragSource, removeAsset }) =>
+const AssetCard = ({ asset, button, connectDragSource, removeAsset, addAssetToPreview }) =>
     connectDragSource(
-        <li className={`asset type-${asset.type.toLowerCase()}`}>
+        <li onDoubleClick={() => addAssetToPreview && addAssetToPreview(asset)} className={`asset type-${asset.type.toLowerCase()}`}>
             <h2>{asset.name}</h2>
             <p>
                 <span className="info">{`${asset.duration} ${asset.duration === "1" ? 'minute' : 'minutes'}`}</span>
